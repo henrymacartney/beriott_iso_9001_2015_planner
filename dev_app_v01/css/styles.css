@@ -1,0 +1,167 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Table Styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Phase Column Styling */
+.phase-cell {
+    background-color: #e6e6e6;
+    width: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.phase-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    white-space: nowrap;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform-origin: left bottom;
+}
+
+/* Status Styling */
+.status-not-started {
+    background-color: #ffcccc; /* Light red */
+}
+
+.status-overdue {
+    background-color: #ff6666; /* Red */
+}
+
+.status-ongoing {
+    background-color: #ffeb99; /* Light yellow */
+}
+
+.status-complete {
+    background-color: #b3ffb3; /* Light green */
+}
+
+/* Completion Percentage Styling */
+.completion-low {
+    color: #ff6666; /* Red */
+}
+
+.completion-medium {
+    color: #ffcc00; /* Yellow */
+}
+
+.completion-high {
+    color: #4CAF50; /* Green */
+}
+
+/* Weekly Planning Grid Styling */
+.week-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2px;
+    height: 40px;
+    width: 40px;
+    margin: 0 auto;
+}
+
+.grid-cell {
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.grid-plan {
+    background-color: #d9f2d9; /* Light green */
+}
+
+.grid-execution {
+    background-color: #d9e6f2; /* Light blue */
+}
+
+.grid-review {
+    background-color: #f2d9d9; /* Light red */
+}
+
+.grid-ongoing {
+    background-color: #f2e6d9; /* Light orange */
+}
+
+/* Task ID Column Styling */
+.task-id-container {
+    display: flex;
+}
+
+.phase-column {
+    width: 30px;
+    background-color: #e6e6e6;
+    position: relative;
+}
+
+.task-number-column {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Context Menu Styling */
+#contextMenu {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .container {
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    table {
+        min-width: 1000px;
+    }
+}
+
+/* Tooltip for Notes */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Disabled button styling */
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
